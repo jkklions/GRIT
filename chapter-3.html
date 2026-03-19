@@ -1,0 +1,56 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/chapter-3.html b/chapter-3.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..6aee79f067d465ee0eceb6288a91d1fce0220f48
+--- /dev/null
++++ b/chapter-3.html
+@@ -0,0 +1,46 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Chapter 3 | The Anomaly</title>
++  <link rel="stylesheet" href="styles.css" />
++</head>
++<body>
++  <header class="site-header">
++    <a class="logo" href="index.html">$GRIT</a>
++    <a class="back-link" href="index.html">← Back to quick version</a>
++  </header>
++
++  <main class="chapter-layout">
++    <section class="chapter-panel">
++      <p class="eyebrow">CHAPTER 3</p>
++      <h1>The First Anomaly</h1>
++      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80" alt="Galaxy and stars" />
++      <p>
++        The Harvesters had plans for fleets, missiles, and insurgencies. They had no plan for one impossible animal ignoring every prediction.
++        As Grit crossed red dust, command software began revising the definition of threat from “organized force” to “singular will.”
++      </p>
++      <p>
++        In orbit, an intelligence that never paused hesitated for 0.8 seconds. That was all survivors needed to transmit coordinates,
++        all Grit needed to close distance, and all history needed to call this chapter the first anomaly.
++      </p>
++    </section>
++
++    <section class="game-box">
++      <p class="eyebrow">MINI GAME</p>
++      <h3>Prediction Breaker</h3>
++      <p>Pick moves that are hard to model. Unpredictable paths increase anomaly score.</p>
++      <div class="choice-row">
++        <button class="anomaly-choice" data-points="35">Zig through wreckage</button>
++        <button class="anomaly-choice" data-points="10">Walk in straight line</button>
++        <button class="anomaly-choice" data-points="40">Distraction + flank</button>
++      </div>
++      <div class="meter"><span id="anomaly-meter"></span></div>
++      <p id="anomaly-text" class="outcome">Anomaly score: 20%</p>
++    </section>
++  </main>
++
++  <script src="story.js"></script>
++</body>
++</html>
+ 
+EOF
+)

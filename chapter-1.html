@@ -1,48 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 1 | Impact</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <a class="logo" href="index.html">$GRIT</a>
-    <a class="back-link" href="index.html">← Back to quick version</a>
-  </header>
-
-  <main class="chapter-layout">
-    <section class="chapter-panel">
-      <p class="eyebrow">CHAPTER 1</p>
-      <h1>Impact</h1>
-      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80" alt="Alien-like lights over horizon" />
-      <p>
-        At 04:19 UTC, the sky split into precise geometric fractures. The Harvester fleet didn’t roar in; it simply appeared, as if it had always been there.
-        Every living mind received the same command in one pulse: surrender. Cities froze. Convoys stopped. Entire militaries became statues.
-      </p>
-      <p>
-        Grit didn’t understand the language, but he understood pressure. He felt the fear wave hit, shook his shoulders once, and kept walking.
-        Drones tagged him as irrelevant fauna. Twelve seconds later, six drones were shredded and one broadcast tower was down.
-      </p>
-    </section>
-
-    <section class="game-box">
-      <p class="eyebrow">MINI GAME</p>
-      <h3>Fear Pulse Resistance</h3>
-      <p>Tap the button to push through the fear wave.</p>
-      <button id="resist-btn">Resist</button>
-      <div class="meter"><span id="resist-meter"></span></div>
-      <div class="choice-row">
-        <button id="resist-reset">Reset</button>
-      </div>
-      <p id="resist-text" aria-live="polite">Resistance: 20%</p>
-    </section>
-    <nav class="chapter-nav">
-      <a class="btn" href="chapter-2.html">Next: The Den →</a>
-    </nav>
-  </main>
-
-  <script src="story.js"></script>
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/chapter-1.html b/chapter-1.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..3ee8312ed7b42c50a3c9382098ddde94ed662f5d
+--- /dev/null
++++ b/chapter-1.html
+@@ -0,0 +1,42 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Chapter 1 | Impact</title>
++  <link rel="stylesheet" href="styles.css" />
++</head>
++<body>
++  <header class="site-header">
++    <a class="logo" href="index.html">$GRIT</a>
++    <a class="back-link" href="index.html">← Back to quick version</a>
++  </header>
++
++  <main class="chapter-layout">
++    <section class="chapter-panel">
++      <p class="eyebrow">CHAPTER 1</p>
++      <h1>Impact</h1>
++      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80" alt="Alien-like lights over horizon" />
++      <p>
++        At 04:19 UTC, the sky split into precise geometric fractures. The Harvester fleet didn’t roar in; it simply appeared, as if it had always been there.
++        Every living mind received the same command in one pulse: surrender. Cities froze. Convoys stopped. Entire militaries became statues.
++      </p>
++      <p>
++        Grit didn’t understand the language, but he understood pressure. He felt the fear wave hit, shook his shoulders once, and kept walking.
++        Drones tagged him as irrelevant fauna. Twelve seconds later, six drones were shredded and one broadcast tower was down.
++      </p>
++    </section>
++
++    <section class="game-box">
++      <p class="eyebrow">MINI GAME</p>
++      <h3>Fear Pulse Resistance</h3>
++      <p>Tap the button to push through the fear wave.</p>
++      <button id="resist-btn">Resist</button>
++      <div class="meter"><span id="resist-meter"></span></div>
++      <p id="resist-text">Resistance: 20%</p>
++    </section>
++  </main>
++
++  <script src="story.js"></script>
++</body>
++</html>
+ 
+EOF
+)
